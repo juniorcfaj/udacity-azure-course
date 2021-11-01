@@ -17,8 +17,8 @@ For this project, you will write a Packer template and a Terraform template to d
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
 ### Instructions
-    ### Create the Policy Definition (Subscription scope)
-    az policy definition create --name audit-existing-linux-vm-ssh-with-password --display-name "Audit existing Linux VMs that use password for SSH authentication" --description "This policy audits if a password is being used to authentication to a Linux VM" --rules https://raw.githubusercontent.com/Azure/azure-policy/master/samples/Compute/audit-existing-linux-vm-ssh-with-password/azurepolicy.rules.json --mode All
+    # Create the Policy Definition (Subscription scope)
+    az policy definition create --name tagging-policy --display-name "Require a tag on resources" --description "This policy ensures all indexed resources in your subscripiton have tags and denies deployment if they do not" --rules https://raw.githubusercontent.com/Azure/azure-policy/master/samples/Compute/audit-existing-linux-vm-ssh-with-password/azurepolicy.rules.json --mode All
 
     # Create the Policy Assignment
     # Set the scope to a resource group; may also be a subscription or management group
