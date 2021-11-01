@@ -1,12 +1,13 @@
 # Azure Infrastructure Operations Project: Deploying a scalable IaaS web server in Azure
 
 ### Introduction
-For this project, you will write a Packer template and a Terraform template to deploy a customizable, scalable web server in Azure.
+
+This project is for Azure DevOps Engineers who want to deploy a scalable IaaS web server in Azure.
 
 ### Getting Started
 1. Clone this repository
 
-2. Create your infrastructure as code
+2. Log in into Azure
 
 3. Update this README to reflect how someone would use your code.
 
@@ -18,13 +19,17 @@ For this project, you will write a Packer template and a Terraform template to d
 
 ### Instructions
     # Create the Policy Definition (Subscription scope)
-    az policy definition create --name tagging-policy --display-name "Require a tag on resources" --description "This policy ensures all indexed resources in your subscripiton have tags and denies deployment if they do not" --rules https://github.com/juniorcfaj/udacity-azure-course/blob/main/azurepolicy.rules.json --mode Indexed
+    az policy definition create --name tagging-policy --rules https://raw.githubusercontent.com/juniorcfaj/udacity-azure-course/main/azurepolicy.rules.json
 
     # Create the Policy Assignment
     # Set the scope to a resource group; may also be a subscription or management group
-    az policy assignment create --name 'audit-existing-linux-vm-ssh-with-password-assignment' --display-name "Audit existing Linux VMs that use password for SSH authentication Assignment" --scope /subscriptions/<subscriptionId>/resourceGroups/<resourceGroupName> --policy /subscriptions/<subscriptionId>/providers/Microsoft.Authorization/policyDefinitions/audit-existing-linux-vm-ssh-with-password
+    az policy assignment create --name tagging-policy --display-name 'Tagging Policy' --scope /subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a --policy tagging-policy
 
+    # Show your Policy
+    az policy assignment show tagging-policy
 
 ### Output
 **Your words here**
+    That will be your result
 
+    ![App Screenshot](https://github.com/juniorcfaj/udacity-azure-course/blob/main/src/policy-result.jpeg)
