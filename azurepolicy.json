@@ -5,20 +5,6 @@
         "mode": "Indexed",
         "displayName": "Tagging Policy",
         "description": "This policy ensures all indexed resources in your subscripiton have tags and denies deployment if they do not",
-        "scope": "/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a",
-        "metadata": {
-            "version": "1.0.0",
-            "category": "Tags"
-        },
-        "parameters": {
-            "tagName": {
-              "type": "String",
-              "metadata": {
-                "displayName": "Tag Name",
-                "description": "Name of the tag, such as 'environment'"
-              }
-            }
-          },
         "policyRule": {
             "if": {
                 "allof": [
