@@ -18,6 +18,8 @@ This project is for Azure DevOps Engineers who want to deploy a scalable IaaS we
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
 ### Instructions
+
+#### Creating a Policy
     # Create the Policy Definition (Subscription scope)
     az policy definition create --name tagging-policy --rules https://raw.githubusercontent.com/juniorcfaj/udacity-azure-course/main/azurepolicy.rules.json
 
@@ -29,7 +31,7 @@ This project is for Azure DevOps Engineers who want to deploy a scalable IaaS we
     az policy assignment show tagging-policy
 
 ### Output
-**Your words here**
-    That will be your result
 
-    ![App Screenshot](https://github.com/juniorcfaj/udacity-azure-course/blob/main/src/policy-result.jpeg)
+That will be your result
+
+    
