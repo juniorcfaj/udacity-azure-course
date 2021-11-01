@@ -18,7 +18,7 @@ For this project, you will write a Packer template and a Terraform template to d
 
 ### Instructions
     # Create the Policy Definition (Subscription scope)
-    az policy definition create --name tagging-policy --display-name "Require a tag on resources" --description "This policy ensures all indexed resources in your subscripiton have tags and denies deployment if they do not" --rules https://raw.githubusercontent.com/Azure/azure-policy/master/samples/Compute/audit-existing-linux-vm-ssh-with-password/azurepolicy.rules.json --mode All
+    az policy definition create --name tagging-policy --display-name "Require a tag on resources" --description "This policy ensures all indexed resources in your subscripiton have tags and denies deployment if they do not" --rules https://github.com/juniorcfaj/udacity-azure-course/blob/main/azurepolicy.rules.json --mode Indexed
 
     # Create the Policy Assignment
     # Set the scope to a resource group; may also be a subscription or management group

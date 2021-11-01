@@ -2,7 +2,7 @@
     "if": {
         "allof": [
             {
-                "field": "[concat('tags[', parameters('tagName'), ']')]",
+                "field": "tags",
                 "exists": "False"
             }
         ]
