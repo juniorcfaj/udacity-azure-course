@@ -4,15 +4,12 @@
     "properties": {
         "mode": "Indexed",
         "displayName": "Tagging Policy",
+        "policyType": "Custom",
         "description": "This policy ensures all indexed resources in your subscripiton have tags and denies deployment if they do not",
         "policyRule": {
             "if": {
-                "allof": [
-                    {
-                        "field": "tags",
-                        "exists": "False"
-                    }
-                ]
+                "field": "tags['name']",
+                "exists": "False"
             },
             "then": {
                 "effect": "deny"
