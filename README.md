@@ -30,8 +30,39 @@ This project is for Azure DevOps Engineers who want to deploy a scalable IaaS we
     # Show your Policy
     az policy assignment show tagging-policy
 
+#### Build the image with Packer
+
+    # Run the command
+    packer build server.json
+
+#### Create a Resource Group
+
+    # Run the command
+    az group create -n udacity-project -l eastus
+
 ### Output
 
-That will be your result
+Creating Policy
 
-    
+    {
+        "description": null,
+        "displayName": "Tagging Policy",
+        "enforcementMode": "Default",
+        "id": "/subscriptions/XXXXXXXXXXXXXXXXXXXXXXX/providers/Microsoft.Authorization/policyAssignments/tagging-policy",
+        "identity": null,
+        "location": null,
+        "metadata": {
+        "createdBy": "XXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "createdOn": "2021-11-01T18:39:45.0906256Z",
+        "updatedBy": null,
+        "updatedOn": null
+        },
+        "name": "tagging-policy",
+        "nonComplianceMessages": null,
+        "notScopes": null,
+        "parameters": null,
+        "policyDefinitionId": "/subscriptions/XXXXXXXXXXXXXXXXXXXXXXX/providers/Microsoft.Authorization/policyDefinitions/tagging-policy",
+        "scope": "/subscriptions/XXXXXXXXXXXXXXXXXXXXXXX",
+        "type": "Microsoft.Authorization/policyAssignments"
+    }
+
