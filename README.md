@@ -19,26 +19,50 @@ This project is for Azure DevOps Engineers who want to deploy a scalable IaaS we
 
 ### Instructions
 
+#### Login into Azure
+
+    az login
+
 #### Creating a Policy
     # Create the Policy Definition (Subscription scope)
     az policy definition create --name tagging-policy --rules https://raw.githubusercontent.com/juniorcfaj/udacity-azure-course/main/azurepolicy.rules.json
 
     # Create the Policy Assignment
     # Set the scope to a resource group; may also be a subscription or management group
-    az policy assignment create --name tagging-policy --display-name 'Tagging Policy' --scope /subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a --policy tagging-policy
+    az policy assignment create --name tagging-policy --display-name 'Tagging Policy' --scope /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxx --policy tagging-policy
 
     # Show your Policy
     az policy assignment show tagging-policy
-
-#### Build the image with Packer
-
-    # Run the command
-    packer build server.json
 
 #### Create a Resource Group
 
     # Run the command
     az group create -n udacity-project -l eastus
+
+#### Getting your informations from Azure
+
+    # Client_id, Client_secret, Tenant_id
+    az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, tenant_id: tenant }"
+    # Subscription
+    az account show --query "{ subscription_id: id }"
+
+### Build the image with Packer
+
+Now you have all informations about your Azure account that you need. Use "client_id", "client_secret", "tenant_id" e "subscription_id" into variables on server.json and you'll be able to build your image using Packer.
+
+    # Run the command:
+    packer build server.json
+
+## Create a Terraform template
+
+    # First you need to update your Terraform. Run the command:
+    terraform init
+
+    # Plannig your Terraform template. Run the command:
+    terraform plan -out main.tf
+
+    # If your template is right, you can apply with this command
+    terraform apply
 
 ### Output
 
