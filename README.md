@@ -126,5 +126,63 @@ Now you have all informations about your Azure account that you need. Use "clien
 #### Create a Terraform template
 
     # Result
+    
+    azurerm_resource_group.udacity: Creating...
+    azurerm_resource_group.udacity: Creation complete after 6s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg]
+    azurerm_availability_set.udacity: Creating...      
+    azurerm_managed_disk.udacity[1]: Creating...       
+    azurerm_managed_disk.udacity[0]: Creating...       
+    azurerm_virtual_network.udacity: Creating...       
+    azurerm_public_ip.udacity: Creating...
+    azurerm_network_security_group.udacity: Creating...
+    azurerm_availability_set.udacity: Creation complete after 9s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Compute/availabilitySets/project-one-available-set]
+    azurerm_network_security_group.udacity: Still creating... [10s elapsed]
+    azurerm_managed_disk.udacity[1]: Still creating... [10s elapsed]
+    azurerm_public_ip.udacity: Still creating... [10s elapsed]      
+    azurerm_managed_disk.udacity[0]: Still creating... [10s elapsed]
+    azurerm_virtual_network.udacity: Still creating... [10s elapsed]
+    azurerm_public_ip.udacity: Creation complete after 11s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/publicIPAddresses/project-one-public-ip]
+    azurerm_lb.udacity: Creating...
+    azurerm_managed_disk.udacity[1]: Creation complete after 11s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Compute/disks/disk-1]
+    azurerm_managed_disk.udacity[0]: Creation complete after 11s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Compute/disks/disk-0]
+    azurerm_network_security_group.udacity: Creation complete after 13s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/networkSecurityGroups/project-one-nsc]
+    azurerm_virtual_network.udacity: Creation complete after 13s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/virtualNetworks/project-one-network]
+    azurerm_subnet.udacity: Creating...
+    azurerm_lb.udacity: Creation complete after 8s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/loadBalancers/project-one-uda-lb]
+    azurerm_lb_backend_address_pool.udacity: Creating...
+    azurerm_subnet.udacity: Creation complete after 8s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/virtualNetworks/project-one-network/subnets/project-one-subnet]
+    azurerm_network_interface.udacity[0]: Creating...
+    azurerm_network_interface.udacity[1]: Creating...
+    azurerm_lb_backend_address_pool.udacity: Creation complete after 4s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/loadBalancers/project-one-uda-lb/backendAddressPools/project-one-association]
+    azurerm_network_interface.udacity[0]: Creation complete after 5s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/networkInterfaces/project-one-nic-0]
+    azurerm_network_interface.udacity[1]: Creation complete after 9s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/networkInterfaces/project-one-nic-1]
+    azurerm_network_interface_security_group_association.udacity[0]: Creating...
+    azurerm_network_interface_security_group_association.udacity[1]: Creating...
+    azurerm_linux_virtual_machine.udacity[1]: Creating...
+    azurerm_linux_virtual_machine.udacity[0]: Creating...
+    azurerm_network_interface_security_group_association.udacity[0]: Creation complete after 5s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/networkInterfaces/project-one-nic-0|/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/networkSecurityGroups/project-one-nsc]
+    azurerm_network_interface_security_group_association.udacity[1]: Creation complete after 8s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/networkInterfaces/project-one-nic-1|/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Network/networkSecurityGroups/project-one-nsc]
+    azurerm_linux_virtual_machine.udacity[0]: Still creating... [10s elapsed]
+    azurerm_linux_virtual_machine.udacity[1]: Still creating... [10s elapsed]
+    azurerm_linux_virtual_machine.udacity[1]: Still creating... [20s elapsed]
+    azurerm_linux_virtual_machine.udacity[0]: Still creating... [20s elapsed]
+    azurerm_linux_virtual_machine.udacity[0]: Still creating... [31s elapsed]
+    azurerm_linux_virtual_machine.udacity[1]: Still creating... [31s elapsed]
+    azurerm_linux_virtual_machine.udacity[1]: Still creating... [41s elapsed]
+    azurerm_linux_virtual_machine.udacity[0]: Still creating... [41s elapsed]
+    azurerm_linux_virtual_machine.udacity[0]: Still creating... [51s elapsed]
+    azurerm_linux_virtual_machine.udacity[1]: Still creating... [51s elapsed]
+    azurerm_linux_virtual_machine.udacity[0]: Creation complete after 55s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Compute/virtualMachines/project-one-vm-0]
+    azurerm_linux_virtual_machine.udacity[1]: Creation complete after 56s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Compute/virtualMachines/project-one-vm-1]
+    azurerm_virtual_machine_data_disk_attachment.udacity[1]: Creating...
+    azurerm_virtual_machine_data_disk_attachment.udacity[0]: Creating...
+    azurerm_virtual_machine_data_disk_attachment.udacity[0]: Still creating... [10s elapsed]
+    azurerm_virtual_machine_data_disk_attachment.udacity[1]: Still creating... [10s elapsed]
+    azurerm_virtual_machine_data_disk_attachment.udacity[1]: Still creating... [20s elapsed]
+    azurerm_virtual_machine_data_disk_attachment.udacity[0]: Still creating... [20s elapsed]
+    azurerm_virtual_machine_data_disk_attachment.udacity[0]: Still creating... [30s elapsed]
+    azurerm_virtual_machine_data_disk_attachment.udacity[1]: Still creating... [30s elapsed]
+    azurerm_virtual_machine_data_disk_attachment.udacity[1]: Creation complete after 36s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Compute/virtualMachines/project-one-vm-1/dataDisks/disk-1]
+    azurerm_virtual_machine_data_disk_attachment.udacity[0]: Creation complete after 37s [id=/subscriptions/38ab3a8f-5bc4-423b-a32d-07a5df36088a/resourceGroups/project-one-rg/providers/Microsoft.Compute/virtualMachines/project-one-vm-0/dataDisks/disk-0]
 
     Apply complete! Resources: 18 added, 0 changed, 0 destroyed.
