@@ -4,13 +4,6 @@
 
 This project is for Azure DevOps Engineers who want to deploy a scalable IaaS web server in Azure.
 
-## Getting Started
-1. Clone this repository
-
-2. Log in into Azure
-
-3. Update this README to reflect how someone would use your code.
-
 ## Dependencies
 1. Create an [Azure Account](https://portal.azure.com) 
 2. Install the [Azure command line interface](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
