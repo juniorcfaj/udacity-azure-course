@@ -37,12 +37,13 @@ This project is for Azure DevOps Engineers who want to deploy a scalable IaaS we
 #### Create a Resource Group
 
     # Run the command
-    az group create -n udacity-project -l eastus
+    az group create -n udacity-project-rg -l eastus
 
 #### Getting your informations from Azure
 
     # Client_id, Client_secret, Tenant_id
     az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, tenant_id: tenant }"
+
     # Subscription
     az account show --query "{ subscription_id: id }"
 

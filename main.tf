@@ -121,7 +121,7 @@ resource "azurerm_availability_set" "udacity" {
 
 resource "azurerm_linux_virtual_machine" "udacity" {
   count = var.vm_count
-  name                            = "${var.prefix}-vm"
+  name                            = "${var.prefix}-vm-${count.index}"
   resource_group_name             = azurerm_resource_group.udacity.name
   location                        = azurerm_resource_group.udacity.location
   size                            = "Standard_D2s_v3"
